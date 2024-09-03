@@ -1,5 +1,5 @@
 ## How to run (Node/Nodemon)
--Get coingecko api key from https://www.coingecko.com/en/developers/dashboard
--Edit apiKey in index.js file
--run `Nodemon index.js` to start server. 
--You can open app at http://localhost:3000/
+1. Get coingecko api key from https://www.coingecko.com/en/developers/dashboard
+2. Edit apiKey in index.js file
+3. run `Nodemon index.js` to start server. 
+4. You can open app at http://localhost:3000/
