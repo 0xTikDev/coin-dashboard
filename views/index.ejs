@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tracker</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <%= currency %>: <%= price %>
+        </h1>
+        <form action="\dropdown" method="post">
+            <select name="coin" id="coin">
+                <option value="ethereum">Etherum</option>
+                <option value="tron">Tron</option>
+                <option value="solana">Solana</option>
+                <option value="uniswap">Uniswap</option>
+                <option value="dogecoin">Dogecoin</option>
+                <option value="bitcoin"> Bitcoin</option>
+                <option value="binancecoin"> BNB</option>
+                <option value="ripple">XRP</option>
+            </select>
+            <input type="submit">
+           </form>
+        <p>This website helps you get quick price of cryptocurrency. 
+            This is version 1.1. Subsequent versions will roll out 
+            cool features that will enable user customization. </p>
+        <hr>
+
+        <small><p>TikDev &copy; <%= new Date().getFullYear(); %></p></small>
+    </div>
+</body>
+</html>
