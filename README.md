@@ -1,5 +1,6 @@
-## How to run (Node/Nodemon)
-1. Get coingecko api key from https://www.coingecko.com/en/developers/dashboard
-2. Edit apiKey in index.js file
-3. run `Nodemon index.js` to start server. 
-4. You can open app at http://localhost:3000/
+# Traders' Terminal provides real `time market` data so investors/traders can make solid decision while saving time
+
+## How to run
+1. run `npm i` to install required packages
+2. run `Nodemon index.js` to start server. 
+3. You can open app at http://localhost:3000/

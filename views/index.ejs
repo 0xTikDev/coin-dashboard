@@ -3,33 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price Tracker</title>
+    <title>traders' terminal</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    
+    <div class="carousel">
+        <div class="group">
+          <div class="card"> <img src="images/debridge.jpg" alt=" debridge image "> deBridge Foundation $DBR will go live on 17.10.2024.</div>
+        </div
+        <!-- Hides from screen readers -->
+        <div aria-hidden class="group">
+            <div class="card"> <img src="images/debridge.jpg" alt="debridge image" /> deBridge Foundation $DBR will go live on 17.10.2024.</div>
+        </div>
+      </div>
+      <h1>Real Time Market Data</h1>
     <div class="container">
-        <h1>
-            <%= currency %>: <%= price %>
-        </h1>
-        <form action="\dropdown" method="post">
-            <select name="coin" id="coin">
-                <option value="ethereum">Etherum</option>
-                <option value="tron">Tron</option>
-                <option value="solana">Solana</option>
-                <option value="uniswap">Uniswap</option>
-                <option value="dogecoin">Dogecoin</option>
-                <option value="bitcoin"> Bitcoin</option>
-                <option value="binancecoin"> BNB</option>
-                <option value="ripple">XRP</option>
-            </select>
-            <input type="submit">
-           </form>
-        <p>This website helps you get quick price of cryptocurrency. 
-            This is version 1.1. Subsequent versions will roll out 
-            cool features that will enable user customization. </p>
-        <hr>
-
-        <small><p>TikDev &copy; <%= new Date().getFullYear(); %></p></small>
+        <div class="item one">
+        <img src="images/data.jpeg" alt="">
+        </div>
+        <div class="item two">
+            <img src="images/debridgeExchange.jpeg" alt="">
+        </div>   
+        <div class="item three">
+            <table id="ticker-table">
+                <thead>
+                    <th>Symbol</th>
+                    <th>Last Price</th>
+                    <th> % Chg</th>
+                    <th>Volume</th>
+                </thead>
+                <tbody id="ticker-body">
+    
+                </tbody>
+    
+            </table>
+        </div>
     </div>
+
+
+<script>
+    function stylus(old, current) {
+        let color = !old || old === current ? 'black' : current > old ? 'green' : 'red';
+        return color
+
+    }
+    function formatPrice(price) {
+        const value = parseFloat(price);
+        if (value > 1) {
+            return value.toFixed(2);
+        } else if (value < 1 && value > 0.0001) {
+            return value.toFixed(6);
+        } else {
+            return value.toFixed(8);
+        }
+    }
+    const socket = new WebSocket('wss://data-stream.binance.vision:443/ws/!ticker@arr');
+    socket.onmessage = (event) => {
+    const tickers = JSON.parse(event.data);
+
+    usdtPairs = tickers.filter(ticker => ticker.s.endsWith('USDT')).map(temporal => ({
+        s: temporal.s,
+        c: formatPrice(temporal.c),
+        P: parseFloat(temporal.P).toFixed(2),
+        v: parseFloat(temporal.v).toFixed(0)
+    }));
+
+    const tickerBody = document.getElementById("ticker-body");
+    tickerBody.innerHTML = '';
+
+    let lastPrice = null;
+    let lastChange = null
+usdtPairs.forEach(ticker => {
+    
+    let price = ticker.c;
+    let change = ticker.P;
+    const row = `<tr>
+        <td>${ticker.s}</td>
+        <td style="color:${stylus(lastPrice, price)}" >${price}</td>
+        <td style="color: ${stylus(lastChange, change)}">${ticker.P}</td>
+        <td> ${ticker.v} </td>
+    </tr>`;
+
+    tickerBody.innerHTML += row;
+    lastPrice = price; 
+    lastChange = change;
+});
+   
+
+    };
+    
+</script>    
 </body>
 </html>
