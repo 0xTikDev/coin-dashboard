@@ -35,21 +35,26 @@ h1 {
 table {
     width: 100%;
     text-align: left;
+    table-layout: fixed;
+}
+tr {
+    width: 80%;
 }
 
 td {
-    text-align: left;
-    height: 35px;
+    text-align: center;
+    height: 30px;
 }
 th {
     color: rgb(95, 97, 97);
-    text-align: left;
+    text-align: center;
     height: 50px;
 }
 
 
 th, td {
-    width: 25%;
+    width: 20%;
+
 }
 tr:nth-child(even) {background-color: #f2f2f281;}
 
