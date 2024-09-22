@@ -1,4 +1,4 @@
-# Traders' Terminal provides real `time market` data so investors/traders can make solid decision while saving time
+## Traders' Terminal provides real `time market` data so investors/traders can make solid decision while saving time
 
 ## How to run
 1. run `npm i` to install required packages
