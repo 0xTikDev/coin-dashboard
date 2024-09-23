@@ -67,6 +67,7 @@ tr:nth-child(even) {background-color: #f2f2f281;}
     display: flex;
     flex-wrap: nowrap;
     text-wrap: nowrap;
+    font-size: medium;
   }
   small {
     color: grey;
@@ -92,7 +93,7 @@ flex: 0 0 100%;
 animation-play-state: paused;
 }
 .card > img {
-  height: 25px;
+  height: 20px;
   padding-right: 5px;
   border-radius: 50%;
 }
