@@ -116,6 +116,9 @@ transform: translateX(-100%);
     td {
         font-size: 70%;
     }
+    small {
+        font-size: 70%;
+    }
     
 }
 
