@@ -73,7 +73,7 @@
         s: temporal.s.replace("USDT", ""), // then display only underlying asset without USDT
         c: formatPrice(temporal.c), // call formatPrice function to format price decimal places
         P: parseFloat(temporal.P).toFixed(2),
-        q: parseFloat(temporal.q).toFixed(0)
+        v: parseFloat(temporal.v).toFixed(0)
     }));
 
     const tickerBody = document.getElementById("ticker-body");
@@ -91,7 +91,7 @@ usdtPairs.forEach(ticker => {
         <td class="symbol">${ticker.s}</td>
         <td class="price" style="color:${stylus(lastPrice, price)}" >$${price}</td>
         <td class="change" style="color: ${stylus(lastChange, change)}">${ticker.P}</td>
-        <td class="volume"> $${ticker.q} </td>
+        <td class="volume"> <small>${ticker.s}</small>${ticker.v} </td>
     </tr>`;
 
     tickerBody.innerHTML += row;

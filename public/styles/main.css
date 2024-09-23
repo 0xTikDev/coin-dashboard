@@ -66,6 +66,10 @@ tr:nth-child(even) {background-color: #f2f2f281;}
     display: flex;
     flex-wrap: nowrap;
   }
+  small {
+    color: grey;
+    font-size: 50%;
+  }
 
   .card {
     padding: 10px;
