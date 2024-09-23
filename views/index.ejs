@@ -91,7 +91,7 @@ usdtPairs.forEach(ticker => {
         <td class="symbol">${ticker.s}</td>
         <td class="price" style="color:${stylus(lastPrice, price)}" >$${price}</td>
         <td class="change" style="color: ${stylus(lastChange, change)}">${ticker.P}</td>
-        <td class="volume"> <small>${ticker.s}</small>${ticker.v} </td>
+        <td class="volume"> <small>${ticker.s}</small> ${ticker.v} </td>
     </tr>`;
 
     tickerBody.innerHTML += row;
