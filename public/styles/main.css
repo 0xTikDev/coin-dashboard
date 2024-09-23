@@ -57,8 +57,9 @@ th, td {
 tr:nth-child(even) {background-color: #f2f2f281;}
 
 /* Styling individual table columns */
-.symbol {text-align: left;}
-.price, .change, .volume {text-align: right;}
+.symbol, .price {text-align: left;}
+.volume {text-align: right;}
+.change {text-align: center;}
 
 .carousel {
     overflow: hidden;
