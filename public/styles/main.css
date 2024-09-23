@@ -31,10 +31,10 @@ h1 {
     grid-column: span 2;
     
 }
+/* Table Styling */
 
 table {
     width: 100%;
-    text-align: left;
     table-layout: fixed;
 }
 tr {
@@ -42,12 +42,10 @@ tr {
 }
 
 td {
-    text-align: center;
     height: 30px;
 }
 th {
     color: rgb(95, 97, 97);
-    text-align: center;
     height: 50px;
 }
 
@@ -57,6 +55,10 @@ th, td {
 
 }
 tr:nth-child(even) {background-color: #f2f2f281;}
+
+/* Styling individual table columns */
+.symbol {text-align: left;}
+.price, .change, .volume {text-align: right;}
 
 .carousel {
     overflow: hidden;
@@ -104,3 +106,4 @@ transform: translateX(0);
 transform: translateX(-100%);
 }
 }
+
