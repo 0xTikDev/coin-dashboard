@@ -1,4 +1,6 @@
-    function stylus(old, current) {
+// SECTION A: DATA RENDERING AND FORMATING FROM BINANCE WEB SOCKET API, DISPLAYED DYNAMICALLY
+
+function stylus(old, current) {
         let color = !old || old === current ? 'black' : current > old ? 'green' : 'red';
         return color
 
@@ -57,3 +59,6 @@ usdtPairs.forEach(ticker => {
 
     };
     
+
+
+// SECTION B: CHART/GRAPH RENDERING ...

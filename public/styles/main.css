@@ -1,6 +1,7 @@
 body {
     background-color:whitesmoke;
     font-family: sans-serif;
+    margin: 0px;
 }
 .container {
     display: grid;
@@ -65,6 +66,7 @@ tr:nth-child(even) {background-color: #f2f2f281;}
     overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
+    text-wrap: nowrap;
   }
   small {
     color: grey;
@@ -78,7 +80,8 @@ tr:nth-child(even) {background-color: #f2f2f281;}
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: seagreen;
+    color: black ;
+    font-family: serif;
   }
   .carousel {
 
@@ -93,6 +96,7 @@ animation-play-state: paused;
   padding-right: 5px;
   border-radius: 50%;
 }
+background-color: rgb(174, 184, 139);
 }
 
 /* Group the cards for better structure. */
