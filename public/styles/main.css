@@ -75,7 +75,7 @@ tr:nth-child(even) {background-color: #f2f2f281;}
   }
 
   .card {
-    padding: 10px;
+    padding: 5px;
     align-items: center;
     font-family: sans-serif;
     display: inline-flex;
