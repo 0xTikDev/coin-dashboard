@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>traders' terminal</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="carousel">
@@ -21,11 +22,12 @@
       <h2>Stay up to date with market trends, and make informed financial decisions at a glance.</h2>
     <div class="container">
         <div class="item one">
-        <img src="images/data.jpeg" alt="">
+            <canvas id="chart1" height="50px"> </canvas>
         </div>
         <div class="item two">
-            <img src="images/bullB.png" alt="">
-        </div>   
+            <canvas id="chart2" height="50px"> <img src="images/data.jpeg" alt=""></canvas>
+        </div>
+       
         <div class="item three">
             
             <table id="ticker-table">
@@ -44,6 +46,6 @@
             </table>
         </div>
     </div>
-<script src="javascript/main.js"></script>    
+<script src="javascript/main.js"></script>  
 </body>
 </html>
