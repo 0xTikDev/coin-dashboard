@@ -62,12 +62,12 @@ usdtPairs.forEach(ticker => {
 // SECTION B: CHART/GRAPH RENDERING ...
 
 // sort according to  volume descending and cut out the first 10 (volume in USD)
-let top10To30 = (usdtPairs.sort((a, b) => {
+let top20To35 = (usdtPairs.sort((a, b) => {
     return b.q - a.q;
-})).slice(9, 30);
-let top30To50 = (usdtPairs.sort((a, b) => {
+})).slice(19, 35);
+let top35To50 = (usdtPairs.sort((a, b) => {
     return b.q - a.q;
-})).slice(30, 50);
+})).slice(35, 50);
 let leftChart = document.getElementById('chart1').getContext('2d');
 let rightChart = document.getElementById('chart2').getContext('2d');
 let leftBackground = [
@@ -82,8 +82,8 @@ let rightBackground = [
     "#FF3D00", "#FFD740", "#69F0AE", "#00E676", "#B2FF59",
     "#FFEA00", "#FFD180", "#FF8A00", "#D500F9", "#FFAB40", "#FF5722"
 ];
-leftLabel = 'Volume: top 10 to 20 tickers';
-rightLabel = 'Volume: top 30 to 50 ticker';
+leftLabel = 'Volume: top 20 to 35 tickers';
+rightLabel = 'Volume: top 35 to 50 ticker';
 
 function magicChart(pair, htmlTarget, bColor, label) {
     let volumeChart = new Chart(htmlTarget, {
@@ -130,8 +130,8 @@ function magicChart(pair, htmlTarget, bColor, label) {
     });
     return volumeChart;
 }
-magicChart(top10To30, leftChart, leftBackground, leftLabel);
-magicChart(top30To50, rightChart, rightBackground, rightLabel);
+magicChart(top20To35, leftChart, leftBackground, leftLabel);
+magicChart(top35To50, rightChart, rightBackground, rightLabel);
     
 };
     
