@@ -100,6 +100,21 @@ function magicChart(pair, htmlTarget, bColor, label) {
             }]
         },
         options: {
+            scales: {
+                r: {
+                    ticks: {
+                        font: {
+                            size: 10
+                        }
+                    },
+                    angleLines: {
+                        display: true
+                    },
+                    grid: {
+                        color: '#e0e0e0'
+                    }
+                }
+            },
             responsive: true,
             plugins: {
                 legend: {

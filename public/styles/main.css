@@ -7,7 +7,7 @@ body {
     display: grid;
     grid-template-columns: 48% 48%;
     grid-template-rows: auto auto;
-    gap: 15px;
+    gap: 5px;
     justify-content: center;
     
     
@@ -137,4 +137,8 @@ transform: translateX(-100%);
 }
 a {text-decoration: none;
     color: rgb(95, 97, 97);
+}
+
+#chart1, #chart2 {
+    font-size: 50%;
 }
