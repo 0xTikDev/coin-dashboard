@@ -83,7 +83,7 @@ let rightBackground = [
     "#FFEA00", "#FFD180", "#FF8A00", "#D500F9", "#FFAB40", "#FF5722"
 ];
 leftLabel = 'Volume: top 20 to 35 tickers';
-rightLabel = 'Volume: top 35 to 50 ticker';
+rightLabel = 'Volume: top 35 to 50 tickers';
 
 function magicChart(pair, htmlTarget, bColor, label) {
     let volumeChart = new Chart(htmlTarget, {
