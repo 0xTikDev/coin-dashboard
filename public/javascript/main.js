@@ -87,7 +87,7 @@ rightLabel = 'Volume: top 35 to 50 tickers';
 
 function magicChart(pair, htmlTarget, bColor, label) {
     let volumeChart = new Chart(htmlTarget, {
-        type: 'line', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        type: 'radar', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
         data: {
             labels: pair.map(target => (target.s)),
             datasets: [{
